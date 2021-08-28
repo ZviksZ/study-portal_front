@@ -1,0 +1,6 @@
+{
+  "locales": ["en", "ru"],
+  "input": "src/**/*.{ts,tsx}",
+  "output": "src/locales/$LOCALE/$NAMESPACE.json",
+  "sort": true
+}

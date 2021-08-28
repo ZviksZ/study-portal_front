@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea
+
+src/locales/en/translation_old.json
+src/locales/ru/translation_old.json

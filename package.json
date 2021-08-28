@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "@formatjs/icu-messageformat-parser": "^2.0.11",
     "@reduxjs/toolkit": "^1.5.1",
+    "@tailwindcss/forms": "^0.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -12,17 +15,27 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.23.0",
+    "i18n": "link:./src/i18n",
+    "i18next": "^20.4.0",
+    "i18next-icu": "^2.0.3",
+    "intl-messageformat": "^9.9.1",
+    "locales": "link:./src/locales/",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.4",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
-    "typescript": "~4.1.5"
+    "typescript": "4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "makemessages": "yarn i18next --config i18next-parser.config.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +51,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9",
+    "eslint-plugin-jsdoc": "^36.0.8",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "i18next-parser": "^4.4.0",
+    "postcss": "^7",
+    "prettier": "^2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "sideEffects": [
+    "./src/i18n.ts"
+  ],
+  "resolutions": {
+    "typescript": "4.2.4"
   }
 }
