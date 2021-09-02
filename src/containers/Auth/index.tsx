@@ -6,9 +6,9 @@ function Auth() {
   }, []);
 
   return (
-    <>
+    <div className="tw-flex tw-justify-center tw-items-center tw-h-full">
       <input type="text" />
-    </>
+    </div>
   );
 }
 

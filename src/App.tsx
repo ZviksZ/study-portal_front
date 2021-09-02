@@ -1,13 +1,9 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
-import Auth from './containers/Auth';
+import useRoutes from './routes';
 
 function App() {
-  return (
-    <div>
-      <Auth />
-    </div>
-  );
+  const routes = useRoutes();
+  return <>{routes}</>;
 }
 
 export default App;
