@@ -7,8 +7,9 @@ function Auth() {
   }, []);
 
   return (
-    <div className="tw-flex tw-justify-center tw-items-center tw-h-full">
+    <div className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-h-full">
       <TextInput name="login" placeholder="Enter your username" label="Login" />
+      <TextInput name="password" placeholder="Enter your username" label="Password" />
     </div>
   );
 }
