@@ -75,17 +75,17 @@ export default function Button({
         }[size],
         {
           [ButtonStyle.default]:
-            'tw-bg-mBlue tw-border-mBlue tw-text-white hover:tw-bg-blue-600 hover:tw-border-blue-600 active:tw-border-blue-800 active:tw-bg-blue-800',
+            'tw-bg-blue-500 tw-border-blue-500 tw-text-white hover:tw-bg-blue-600 hover:tw-border-blue-600 active:tw-border-blue-800 active:tw-bg-blue-800',
           [ButtonStyle.secondary]:
             'tw-bg-gray-900 tw-border-gray-900 tw-text-white hover:tw-bg-gray-800 hover:tw-border-gray-800 active:tw-bg-gray-900 active:tw-border-gray-900',
           [ButtonStyle.gray]:
             'tw-bg-gray-500 tw-border-gray-500 tw-text-white hover:tw-bg-gray-400 hover:tw-border-gray-400 active:tw-bg-gray-400 active:tw-border-gray-400',
           [ButtonStyle.cancel]:
-            'tw-border-mBlue tw-bg-white tw-text-mBlue hover:tw-border-blue-600 hover:tw-text-blue-600 active:tw-border-blue-800 active:tw-text-blue-800',
+            'tw-border-blue-500 tw-bg-white tw-text-mBlue hover:tw-border-blue-600 hover:tw-text-blue-600 active:tw-border-blue-800 active:tw-text-blue-800',
           [ButtonStyle.green]:
-            'tw-border-mGreen tw-bg-mGreen hover:tw-bg-green-600 hover:tw-border-green-600 tw-text-white',
+            'tw-border-green-500 tw-bg-green-500 hover:tw-bg-green-600 hover:tw-border-green-600 tw-text-white',
           [ButtonStyle.danger]:
-            'tw-border-mRed tw-bg-white tw-text-mRed hover:tw-border-red-400 hover:tw-bg-red-400 hover:tw-text-white active:tw-border-red-600 active:tw-bg-red-600 active:tw-text-white',
+            'tw-border-red-500 tw-bg-white tw-text-red-500 hover:tw-border-red-400 hover:tw-bg-red-400 hover:tw-text-white active:tw-border-red-600 active:tw-bg-red-600 active:tw-text-white',
           [ButtonStyle.transparent]: 'tw-border-transparent hover:tw-backdrop-filter',
           [ButtonStyle.inverted]: 'tw-border-gray-600 tw-text-white',
           [ButtonStyle.link]:
