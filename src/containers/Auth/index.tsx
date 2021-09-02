@@ -1,6 +1,6 @@
 import React from 'react';
-import TextInput from '../../components/Generic/TextInput/TextInput';
-import Button, { ButtonStyle } from '../../components/Generic/Button/Button';
+import TextInput from 'components/Generic/TextInput/TextInput';
+import Button, { ButtonStyle } from 'components/Generic/Button/Button';
 
 function Auth() {
   return (

@@ -6,6 +6,7 @@ export interface ButtonProps {
   style?: ButtonStyle;
   size?: ButtonSize;
   variant?: ButtonVariant;
+  width?: ButtonWidth;
   testId?: string;
   isDisabled?: boolean;
   withNotification?: boolean;
@@ -38,11 +39,17 @@ export enum ButtonVariant {
   rounded = 'rounded',
 }
 
+export enum ButtonWidth {
+  auto = 'auto',
+  full = 'full',
+}
+
 export default function Button({
   type = 'button',
   style = ButtonStyle.default,
   size = ButtonSize.md,
   variant = ButtonVariant.pill,
+  width = ButtonWidth.auto,
   isDisabled = false,
   withNotification = false,
   testId,
@@ -62,6 +69,10 @@ export default function Button({
           'tw-cursor-not-allowed': isDisabled,
           'tw-opacity-30': isDisabled,
         },
+        {
+          [ButtonWidth.auto]: 'tw-w-auto',
+          [ButtonWidth.full]: 'tw-w-full',
+        }[width],
         {
           [ButtonVariant.pill]: 'tw-rounded-full',
           [ButtonVariant.rounded]: 'tw-rounded-lg',
