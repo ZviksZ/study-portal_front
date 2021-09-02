@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import TextInput from '../../components/Generic/TextInput/TextInput';
 
 function Auth() {
   useEffect(() => {
@@ -7,7 +8,7 @@ function Auth() {
 
   return (
     <div className="tw-flex tw-justify-center tw-items-center tw-h-full">
-      <input type="text" />
+      <TextInput name="login" placeholder="Enter your username" label="Login" />
     </div>
   );
 }
