@@ -22,13 +22,24 @@ export default function RegisterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <TextInput placeholder="Enter your email" label="Email" {...register('email')} />
-      <TextInput placeholder="Enter your username" label="Username" {...register('username')} />
+      <TextInput
+        placeholder="Enter your email"
+        label="Email"
+        {...register('email')}
+        error={errors.email?.message}
+      />
+      <TextInput
+        placeholder="Enter your username"
+        label="Username"
+        {...register('username')}
+        error={errors.username?.message}
+      />
       <TextInput
         type="password"
         placeholder="Enter your password"
         label="Password"
         {...register('password')}
+        error={errors.password?.message}
       />
       <div className="tw-flex tw-justify-center tw-pt-3">
         <Button type="submit" style={ButtonStyle.green}>

@@ -21,12 +21,18 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <TextInput placeholder="Enter your username or email" label="Login" {...register('login')} />
+      <TextInput
+        placeholder="Enter your username or email"
+        label="Login"
+        {...register('login')}
+        error={errors.login?.message}
+      />
       <TextInput
         type="password"
         placeholder="Enter your password"
         label="Password"
         {...register('password')}
+        error={errors.password?.message}
       />
       <div className="tw-flex tw-justify-center tw-pt-3">
         <Button type="submit" style={ButtonStyle.green}>

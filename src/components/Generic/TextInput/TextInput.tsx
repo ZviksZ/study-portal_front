@@ -10,7 +10,7 @@ export interface TextInputProps {
   value?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   testId?: string;
-  description?: string;
+  error?: string;
   type?: string;
   searchIcon?: boolean;
   theme?: 'dark' | 'light' | 'borderless';
@@ -19,7 +19,7 @@ export interface TextInputProps {
 function TextInput(
   {
     testId,
-    description,
+    error,
     isRequired = true,
     isDisabled = false,
     onChange,
@@ -85,9 +85,7 @@ function TextInput(
           autoCapitalize="off"
         />
       </div>
-      {description && (
-        <span className="tw-font-medium tw-text-mGray tw-text-sm tw-pl-2">{description}</span>
-      )}
+      {error && <span className="tw-font-medium tw-text-red-600 tw-text-sm tw-pl-2">{error}</span>}
     </div>
   );
 }
