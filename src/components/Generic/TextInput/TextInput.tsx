@@ -11,6 +11,7 @@ export interface TextInputProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   testId?: string;
   description?: string;
+  type?: string;
   searchIcon?: boolean;
   theme?: 'dark' | 'light' | 'borderless';
 }
@@ -28,6 +29,7 @@ function TextInput(
     searchIcon,
     theme = 'light',
     label,
+    type = 'text',
   }: TextInputProps,
   ref: LegacyRef<HTMLInputElement>,
 ) {
@@ -35,7 +37,7 @@ function TextInput(
     <div className="tw-flex tw-flex-col tw-p-2">
       {label && (
         <div
-          className={classNames('tw-font-medium tw-text-mGray tw-text-md tw-pb-1', {
+          className={classNames('tw-text-center tw-font-medium tw-text-mGray tw-text-md tw-pb-1', {
             'tw-opacity-50': isDisabled,
           })}
         >
@@ -69,7 +71,7 @@ function TextInput(
             'tw-bg-gray-600 tw-border-gray-600 tw-placeholder-white tw-text-white hover:tw-border-gray-700':
               theme === 'dark',
           })}
-          type="text"
+          type={type}
           spellCheck={true}
           required={isRequired}
           name={name}

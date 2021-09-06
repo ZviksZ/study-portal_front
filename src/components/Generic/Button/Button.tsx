@@ -11,7 +11,7 @@ export interface ButtonProps {
   isDisabled?: boolean;
   withNotification?: boolean;
   children: React.ReactNode;
-  onClick: React.MouseEventHandler<HTMLElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export enum ButtonStyle {
