@@ -19,10 +19,7 @@ jobs:
           command: yarn run test
 
 workflows:
-  check:
-    jobs:
-      -build
-  heroku_deploy:
+  commit:
     jobs:
       - build
       - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
