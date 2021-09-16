@@ -19,6 +19,9 @@ jobs:
           command: yarn run test
 
 workflows:
+  check:
+    jobs:
+      -build
   heroku_deploy:
     jobs:
       - build
