@@ -13,6 +13,7 @@ function Auth() {
 
   return (
     <div className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-h-full">
+      <div className="tw-text-5xl  tw-text-gray-500 tw-font-bold tw-pb-4">Study Portal</div>
       {isLoginForm ? <LoginForm /> : <RegisterForm />}
       <AuthPageHelpText setAuthType={setAuthType} isLoginForm={isLoginForm} />
     </div>

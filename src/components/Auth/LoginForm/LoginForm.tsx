@@ -24,14 +24,18 @@ export default function LoginForm() {
       <TextInput
         placeholder="Enter your username or email"
         label="Login"
-        {...register('login')}
+        {...register('login', {
+          required: true,
+        })}
         error={errors.login?.message}
       />
       <TextInput
         type="password"
         placeholder="Enter your password"
         label="Password"
-        {...register('password')}
+        {...register('password', {
+          required: true,
+        })}
         error={errors.password?.message}
       />
       <div className="tw-flex tw-justify-center tw-pt-3">

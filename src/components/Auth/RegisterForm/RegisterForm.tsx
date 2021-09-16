@@ -20,25 +20,34 @@ export default function RegisterForm() {
     console.log(data);
   };
 
+  console.log(errors);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextInput
         placeholder="Enter your email"
         label="Email"
-        {...register('email')}
+        {...register('email', {
+          required: true,
+          pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        })}
         error={errors.email?.message}
       />
       <TextInput
         placeholder="Enter your username"
         label="Username"
-        {...register('username')}
+        {...register('username', {
+          required: true,
+        })}
         error={errors.username?.message}
       />
       <TextInput
         type="password"
         placeholder="Enter your password"
         label="Password"
-        {...register('password')}
+        {...register('password', {
+          required: true,
+        })}
         error={errors.password?.message}
       />
       <div className="tw-flex tw-justify-center tw-pt-3">
