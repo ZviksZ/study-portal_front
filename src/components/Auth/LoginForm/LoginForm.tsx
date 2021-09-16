@@ -16,7 +16,7 @@ export default function LoginForm() {
   } = useForm<LoginFormInputs>();
 
   const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
+    console.log('DATA', data);
   };
 
   return (
