@@ -30,11 +30,12 @@ function TextInput(
     theme = 'light',
     label,
     type = 'text',
+    ...props
   }: TextInputProps,
   ref: LegacyRef<HTMLInputElement>,
 ) {
   return (
-    <div className="tw-flex tw-flex-col tw-p-2">
+    <div className="tw-flex tw-flex-col tw-p-2 tw-relative tw-pb-5">
       {label && (
         <div
           className={classNames('tw-text-center tw-font-medium tw-text-mGray tw-text-md tw-pb-1', {
@@ -83,9 +84,14 @@ function TextInput(
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
+          {...props}
         />
       </div>
-      {error && <span className="tw-font-medium tw-text-red-600 tw-text-sm tw-pl-2">{error}</span>}
+      {error && (
+        <span className="tw-absolute tw-bottom-0 tw-left-0 tw-font-medium tw-text-red-600 tw-text-sm tw-pl-2">
+          {error}
+        </span>
+      )}
     </div>
   );
 }

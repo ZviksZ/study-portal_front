@@ -19,22 +19,33 @@ export default function LoginForm() {
     console.log('DATA', data);
   };
 
+  console.log(errors);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextInput
         placeholder="Enter your username or email"
         label="Login"
-        {...register('login', {
-          required: true,
-        })}
         error={errors.login?.message}
+        {...register('login', {
+          required: {
+            value: true,
+            message: 'This field is required',
+          },
+          maxLength: {
+            value: 10,
+            message: 'Max value length is 10',
+          },
+        })}
       />
       <TextInput
         type="password"
         placeholder="Enter your password"
         label="Password"
         {...register('password', {
-          required: true,
+          required: {
+            value: true,
+            message: 'This field is required',
+          },
         })}
         error={errors.password?.message}
       />
