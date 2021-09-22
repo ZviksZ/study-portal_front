@@ -20,7 +20,7 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} data-ui-purpose="auth-login-form">
       <TextInput
         placeholder="Enter your username or email"
         label="Login"
