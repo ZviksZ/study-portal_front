@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import LoginForm from '../../../components/Auth/LoginForm/LoginForm';
+import LoginForm from 'components/Auth/LoginForm/LoginForm';
 
 describe('LoginForm', () => {
   test('Simple usage', async () => {
