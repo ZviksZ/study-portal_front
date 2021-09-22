@@ -19,7 +19,6 @@ export default function LoginForm() {
     console.log('DATA', data);
   };
 
-  console.log(errors);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextInput
@@ -27,13 +26,10 @@ export default function LoginForm() {
         label="Login"
         error={errors.login?.message}
         {...register('login', {
-          required: {
-            value: true,
-            message: 'This field is required',
-          },
-          maxLength: {
-            value: 10,
-            message: 'Max value length is 10',
+          required: 'This field is required',
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message: 'Please enter a valid email',
           },
         })}
       />
@@ -42,10 +38,7 @@ export default function LoginForm() {
         placeholder="Enter your password"
         label="Password"
         {...register('password', {
-          required: {
-            value: true,
-            message: 'This field is required',
-          },
+          required: 'This field is required',
         })}
         error={errors.password?.message}
       />

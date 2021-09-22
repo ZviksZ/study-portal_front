@@ -20,16 +20,17 @@ export default function RegisterForm() {
     console.log(data);
   };
 
-  console.log(errors);
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextInput
         placeholder="Enter your email"
         label="Email"
         {...register('email', {
-          required: true,
-          pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+          required: 'This field is required',
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message: 'Please enter a valid email',
+          },
         })}
         error={errors.email?.message}
       />
@@ -37,7 +38,7 @@ export default function RegisterForm() {
         placeholder="Enter your username"
         label="Username"
         {...register('username', {
-          required: true,
+          required: 'This field is required',
         })}
         error={errors.username?.message}
       />
@@ -46,7 +47,7 @@ export default function RegisterForm() {
         placeholder="Enter your password"
         label="Password"
         {...register('password', {
-          required: true,
+          required: 'This field is required',
         })}
         error={errors.password?.message}
       />
